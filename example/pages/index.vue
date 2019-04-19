@@ -6,9 +6,10 @@
 	export default {
 		asyncData: function(ctx) {
 			ctx.seo({
-				title: 'test'
+				name: 'My App',
+				title: 'Home Page',
+				description: 'Hello World Page'
 			})
-			console.log(ctx.meta)
 		},
 		head: {
 			//title: 'Home Page'

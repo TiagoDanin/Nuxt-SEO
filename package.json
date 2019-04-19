@@ -51,10 +51,12 @@
 		"index.js",
 		"package.json"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"debug": "^4.1.1"
+	},
 	"devDependencies": {
+		"ava": "1.4.1",
 		"nuxt": "2.6.2",
-		"vue": "2.6.10",
-		"ava": "1.4.1"
+		"vue": "2.6.10"
 	}
 }
