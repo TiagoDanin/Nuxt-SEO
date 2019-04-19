@@ -1,6 +1,6 @@
 {
 	"name": "nuxt-meta",
-	"main": "index.js",
+	"main": "lib/module.js",
 	"bin": {},
 	"preferGlobal": false,
 	"version": "0.0.1",
@@ -20,11 +20,14 @@
 		"seo-optimization",
 		"seo-plugin",
 		"vue",
-		"vuejs"
+		"vuejs",
+		"html-meta",
+		"meta",
+		"social-media"
 	],
 	"scripts": {
-		"start": "node index.js",
-		"test": "echo \"Nice Test :)\""
+		"start": "nuxt example",
+		"test": "ava"
 	},
 	"engines": {
 		"node": ">= 8"
@@ -44,7 +47,9 @@
 	},
 	"files": [
 		"LICENSE",
-		"README.md"
+		"README.md",
+		"index.js",
+		"package.json"
 	],
 	"dependencies": {},
 	"devDependencies": {

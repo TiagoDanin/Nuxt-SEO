@@ -8,6 +8,6 @@ module.exports = {
 		resourceHints: false
 	},
 	modules: [
-		require('../index')
+		require('../lib/module')
 	]
 }
