@@ -1,10 +1,10 @@
 {
-	"name": "nuxt-seo",
+	"name": "nuxt-meta",
 	"main": "index.js",
 	"bin": {},
 	"preferGlobal": false,
 	"version": "0.0.1",
-	"description": "Seo Module for Nuxt.js",
+	"description": "SEO / HTML Meta Tags Module for Nuxt.js",
 	"author": {
 		"name": "Tiago Danin",
 		"email": "TiagoDanin@outlook.com",
@@ -32,25 +32,24 @@
 	"private": false,
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/TiagoDanin/Nuxt-Seo.git"
+		"url": "git+https://github.com/TiagoDanin/Nuxt-Meta.git"
 	},
-	"homepage": "https://TiagoDanin.github.io/Nuxt-Seo",
+	"homepage": "https://TiagoDanin.github.io/Nuxt-Meta",
 	"bugs": {
-		"url": "https://github.com/TiagoDanin/Nuxt-Seo/issues"
+		"url": "https://github.com/TiagoDanin/Nuxt-Meta/issues"
 	},
 	"github": {
-		"name": "Nuxt-Seo",
+		"name": "Nuxt-Meta",
 		"owner": "TiagoDanin"
 	},
 	"files": [
 		"LICENSE",
 		"README.md"
 	],
-	"dependencies": {
-		"ava": "^1.4.1"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"nuxt": "2.6.2",
-		"vue": "2.6.10"
+		"vue": "2.6.10",
+		"ava": "1.4.1"
 	}
 }
