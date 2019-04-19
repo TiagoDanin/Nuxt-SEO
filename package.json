@@ -1,5 +1,5 @@
 {
-	"name": "nuxt-meta",
+	"name": "nuxt-seo",
 	"main": "lib/module.js",
 	"bin": {},
 	"preferGlobal": false,
@@ -35,14 +35,14 @@
 	"private": false,
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/TiagoDanin/Nuxt-Meta.git"
+		"url": "git+https://github.com/TiagoDanin/Nuxt-SEO.git"
 	},
-	"homepage": "https://TiagoDanin.github.io/Nuxt-Meta",
+	"homepage": "https://TiagoDanin.github.io/Nuxt-SEO",
 	"bugs": {
-		"url": "https://github.com/TiagoDanin/Nuxt-Meta/issues"
+		"url": "https://github.com/TiagoDanin/Nuxt-SEO/issues"
 	},
 	"github": {
-		"name": "Nuxt-Meta",
+		"name": "Nuxt-SEO",
 		"owner": "TiagoDanin"
 	},
 	"files": [
