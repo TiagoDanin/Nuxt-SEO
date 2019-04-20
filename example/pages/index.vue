@@ -9,9 +9,6 @@
 				title: 'Home Page',
 				description: 'Hello World Page'
 			})
-		},
-		head: {
-			//title: 'Home Page'
 		}
 	}
 </script>

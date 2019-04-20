@@ -1,0 +1,91 @@
+module.exports = [{
+	charset: 'utf-8'
+}, {
+	lang: 'en'
+}, {
+	language: 'English'
+}, {
+	hid: 'copyright',
+	key: 'copyright',
+	property: 'copyright',
+	name: 'copyright',
+	content: 'TiagoDanin'
+}, {
+	hid: 'name',
+	key: 'name',
+	property: 'name',
+	name: 'name',
+	content: 'TiagoDanin WebSite'
+}, {
+	hid: 'title',
+	key: 'title',
+	property: 'title',
+	name: 'title',
+	content: 'Home Page'
+}, {
+	hid: 'subtitle',
+	key: 'subtitle',
+	property: 'subtitle',
+	name: 'subtitle',
+	content: 'About page'
+}, {
+	hid: 'reply-to',
+	key: 'reply-to',
+	property: 'reply-to',
+	name: 'reply-to',
+	content: 'TiagoDanin@outlook.com'
+}, {
+	hid: 'description',
+	key: 'description',
+	property: 'description',
+	name: 'description',
+	content: 'About the Tiago Danin'
+}, {
+	hid: 'url',
+	key: 'url',
+	property: 'url',
+	name: 'url',
+	content: 'https://tiagodanin.github.io'
+}, {
+	hid: 'og:type',
+	key: 'og:type',
+	property: 'og:type',
+	name: 'og:type',
+	content: 'profile'
+}, {
+	hid: 'og:image',
+	key: 'og:image',
+	property: 'og:image',
+	name: 'og:image',
+	content: 'https://avatars3.githubusercontent.com/u/5731176?s=460&v=4'
+}, {
+	hid: 'og:image:width',
+	key: 'og:image:width',
+	property: 'og:image:width',
+	name: 'og:image:width',
+	content: '460'
+}, {
+	hid: 'og:image:height',
+	key: 'og:image:height',
+	property: 'og:image:height',
+	name: 'og:image:height',
+	content: '460'
+}, {
+	hid: 'og:image:alt',
+	key: 'og:image:alt',
+	property: 'og:image:alt',
+	name: 'og:image:alt',
+	content: 'My Photo - Tiago Danin'
+}, {
+	hid: 'fb:app_id',
+	key: 'fb:app_id',
+	property: 'fb:app_id',
+	name: 'fb:app_id',
+	content: '123456'
+}, {
+	hid: 'fb:page_id',
+	key: 'fb:page_id',
+	property: 'fb:page_id',
+	name: 'fb:page_id',
+	content: '123456'
+}]
