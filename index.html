@@ -1,0 +1,304 @@
+<html>
+
+<head>
+	<title>Nuxt-SEO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="SEO / HTML Meta Tags Module for Nuxt.js by Tiago Danin.">
+	<meta name="keywords" content="tiago, danin, tiagodanin, tiagoedge, Nuxt-SEO">
+	<meta name="author" content="TiagoDanin">
+
+	<meta property="og:title" content="TiagoDanin">
+	<meta property="og:url" content="https://tiagodanin.github.io/Nuxt-SEO">
+	<meta property="og:site_name" content="Nuxt-SEO">
+	<meta property="og:description" content="SEO / HTML Meta Tags Module for Nuxt.js by Tiago Danin.">
+	<meta name="twitter:title" content="Nuxt-SEO">
+	<meta name="twitter:url" content="https://tiagodanin.github.io/Nuxt-SEO">
+
+	<link rel="shortcut icon" href="https://tiagodanin.github.io/images/favicon.ico">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/css/theme.css">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/css/reset.css">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/css/colors.css">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/css/style_time.css">
+	<link rel="stylesheet" href="https://tiagodanin.github.io/css/themify-icons.css">
+	<script src="https://tiagodanin.github.io/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="https://tiagodanin.github.io/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<div class="my-barOne uk-clearfix uk-hidden-small">
+
+
+		<div class="uk-float-left">
+			<ul class="my-barcmd-li uk-subnav uk-subnav-line reset-margin">
+
+				<ul class="my-breadcrumb uk-breadcrumb">
+					<li><span class="my-barcmd"><label class="color-blue"> ~ </label><label class="color-red">&#x276F;</label><label class="color-yellow">&#x276F;</label><label class="color-green">&#x276F;</label>  cd TiagoDanin<span></span></span></li>
+							<li><span></span></li>GitHub
+							<li><span></span></li>Nuxt-SEO
+				</ul>
+
+			</ul>
+		</div>
+
+	</div>
+
+
+	<nav class="my-topbar uk-navbar uk-background-primary">
+		<div class="uk-navbar-left">
+			<a href="https://tiagodanin.github.io" class="uk-navbar-item uk-logo">
+					<img src="https://tiagodanin.github.io/images/github.png" class="my-photo uk-margin-small-right">
+					<label class="uk-visible@s">Nuxt-SEO</label>
+			</a>
+		</div>
+		<!--Menu desktop-->
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+					<li class=""><a href="https://github.com/TiagoDanin/Nuxt-SEO">View project on GitHub <br> <i class="ti-github"></i></a></li>
+					
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical">Menu</button>
+		</div>
+	</nav>
+
+		<div class="uk-card uk-card-body uk-card-primary">
+			<h3 class="uk-card-title">About</h3>
+			<div class="uk-panel">
+				<p>SEO / HTML Meta Tags Module for Nuxt.js by Tiago Danin.</p>
+			</div>
+		</div>
+		<hr class="uk-divider-icon">
+
+
+	<!--
+title: Nuxt-SEO
+description: SEO / HTML Meta Tags Module for Nuxt.js by Tiago Danin.
+cubohub: true
+baseURL: https://tiagodanin.github.io
+-->
+
+
+<div class="uk-container">
+	<h1 id="nuxt-seo"><a href="#nuxt-seo">Nuxt SEO</a></h1>
+<p><a href="https://npmjs.org/package/nuxt-seo"><img src="https://img.shields.io/node/v/nuxt-seo.svg?style=flat-square" alt="Node"></a>
+<a href="https://npmjs.org/package/nuxt-seo"><img src="https://img.shields.io/npm/v/nuxt-seo.svg?style=flat-square" alt="Version"></a>
+<a href="https://npmjs.org/package/nuxt-seo"><img src="https://img.shields.io/npm/dt/nuxt-seo.svg?style=flat-square" alt="Downloads"></a>
+<a href="https://travis-ci.org/TiagoDanin/Nuxt-SEO"><img src="https://img.shields.io/travis/TiagoDanin/Nuxt-SEO.svg?branch=master&#x26;style=flat-square" alt="Travis"></a></p>
+<p>SEO / HTML Meta Tags Module for Nuxt.js</p>
+<h2 id="installation"><a href="#installation">Installation</a></h2>
+<p>Module available through the
+<a href="https://www.npmjs.com/">npm registry</a>. It can be installed using the
+<a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally"><code>npm</code></a>
+or
+<a href="https://yarnpkg.com/en/"><code>yarn</code></a>
+command line tools.</p>
+<pre><code class="hljs language-sh"><span class="hljs-comment"># NPM</span>
+npm install nuxt-seo --save
+<span class="hljs-comment"># Or Using Yarn</span>
+yarn add nuxt-seo</code></pre>
+<h2 id="documentation"><a href="#documentation">Documentation</a></h2>
+<h3 id="setup"><a href="#setup">Setup</a></h3>
+<ul>
+<li>Add <code>nuxt-seo</code> to <code>modules</code> section of your <code>nuxt.config.js</code></li>
+</ul>
+<pre><code class="hljs language-js">{
+	<span class="hljs-attr">modules</span>: [
+		<span class="hljs-string">'nuxt-seo'</span>
+	],
+	<span class="hljs-attr">seo</span>: {
+		<span class="hljs-comment">// Module options</span>
+		name: <span class="hljs-string">'&#x3C;name of site>'</span>,
+		<span class="hljs-attr">title</span>: <span class="hljs-string">'&#x3C;title default>'</span>,
+		<span class="hljs-attr">description</span>: <span class="hljs-string">'&#x3C;description default'</span>
+		<span class="hljs-comment">//...</span>
+	}
+}</code></pre>
+<h3 id="module-options"><a href="#module-options">Module options</a></h3>
+<h4 id="name"><a href="#name"><code>name</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="charset"><a href="#charset"><code>charset</code></a></h4>
+<ul>
+<li>Default: <code>utf-8</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="title"><a href="#title"><code>title</code></a></h4>
+<ul>
+<li>Default: <code>TITLE</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="lang"><a href="#lang"><code>lang</code></a></h4>
+<ul>
+<li>Default: <code>en</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="language"><a href="#language"><code>language</code></a></h4>
+<ul>
+<li>Default: <code>English</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="image"><a href="#image"><code>image</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: URL String</li>
+</ul>
+<h4 id="description"><a href="#description"><code>description</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="keywords"><a href="#keywords"><code>keywords</code></a></h4>
+<ul>
+<li>Default: <code>[]</code></li>
+<li>Type: Array[...keywords] || String</li>
+</ul>
+<h4 id="type"><a href="#type"><code>type</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Types: <a href="http://ogp.me/#types">ogp.me/#types</a></li>
+</ul>
+<h3 id="author"><a href="#author"><code>author</code></a></h3>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: Array[name, email || site] || String</li>
+</ul>
+<h4 id="url"><a href="#url"><code>url</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: URL String</li>
+</ul>
+<h3 id="vue-context"><a href="#vue-context">Vue Context</a></h3>
+<ul>
+<li><code>asyncData: function({ seo }) { seo(options) }</code></li>
+</ul>
+<pre><code class="hljs language-vue"><span class="hljs-tag">&#x3C;<span class="hljs-name">template</span>></span>
+	<span class="hljs-tag">&#x3C;<span class="hljs-name">h1</span>></span>Hello World<span class="hljs-tag">&#x3C;/<span class="hljs-name">h1</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">template</span>></span>
+
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span>></span><span class="javascript">
+	<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+		<span class="hljs-attr">asyncData</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx</span>) </span>{
+			ctx.seo({
+				<span class="hljs-attr">title</span>: <span class="hljs-string">'Home Page'</span>,
+				<span class="hljs-attr">description</span>: <span class="hljs-string">'Hello World Page'</span>
+			})
+		},
+		<span class="hljs-attr">head</span>: {
+			<span class="hljs-comment">//title: 'Home Page'</span>
+		}
+	}
+</span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span></code></pre>
+<h2 id="tests"><a href="#tests">Tests</a></h2>
+<p>To run the test suite, first install the dependencies, then run <code>test</code>:</p>
+<pre><code class="hljs language-sh"><span class="hljs-comment"># NPM</span>
+npm <span class="hljs-built_in">test</span>
+<span class="hljs-comment"># Or Using Yarn</span>
+yarn <span class="hljs-built_in">test</span></code></pre>
+<h2 id="dependencies"><a href="#dependencies">Dependencies</a></h2>
+<ul>
+<li><a href="https://ghub.io/debug">debug</a>: small debugging utility</li>
+</ul>
+<h2 id="dev-dependencies"><a href="#dev-dependencies">Dev Dependencies</a></h2>
+<ul>
+<li><a href="https://ghub.io/ava">ava</a>: Testing can be a drag. AVA helps you get it done.</li>
+<li><a href="https://ghub.io/nuxt">nuxt</a>: A minimalistic framework for server-rendered Vue.js applications (inspired by Next.js)</li>
+<li><a href="https://ghub.io/vue">vue</a>: Reactive, component-oriented view layer for modern web interfaces.</li>
+</ul>
+<h2 id="contributors"><a href="#contributors">Contributors</a></h2>
+<p>Pull requests and stars are always welcome. For bugs and feature requests, please <a href="https://github.com/TiagoDanin/Nuxt-SEO/issues">create an issue</a>. <a href="https://github.com/TiagoDanin/Nuxt-SEO/graphs/contributors">List of all contributors</a>.</p>
+<h2 id="license"><a href="#license">License</a></h2>
+<p><a href="LICENSE">MIT</a> © <a href="https://TiagoDanin.github.io">Tiago Danin</a></p>
+
+
+	<hr class="uk-margin-top-remove uk-divider-icon">
+
+	<div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" uk-grid="">
+		<div>
+			<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+				<h3 class="uk-card-title"><span uk-icon="tag"></span></h3>
+				<p>JavaScript</p>
+			</div>
+		</div>
+		<div>
+			<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+				<h3 class="uk-card-title"><span uk-icon="star"></span></h3>
+				<p>1</p>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body uk-panel-space uk-padding-remove-left uk-padding-remove-right">
+			<h3 class="uk-card-title uk-align-center">Contact Me &amp; Social Media</h3>
+			<!--
+title: Contacts
+description: Contact Me &amp; Social Media.
+-->
+
+<ul class="uk-child-width-expand@s uk-margin-auto uk-text-center" uk-grid="">
+	<li><a href="https://tiagodanin.github.io/sitemap"><i class="ti-home"></i> SiteMap</a></li>
+	<li><a href="https://telegram.me/WallpapersFull"><i class="ti-gallery"></i> Wallpapers</a></li>
+	<li><a href="https://unsplash.com/@tiagodanin"><i class="ti-camera"></i> Unsplash</a></li>
+	<li><a href="https://github.com/TiagoDanin"><i class="ti-github"></i> GitHub</a></li>
+	<li><a href="https://telegram.me/TiagoEDGE"><i class="ti-user"></i> Telegram</a></li>
+	<li><a href="https://www.reddit.com/user/TiagoEDGE/"><i class="ti-reddit"></i> Reddit</a></li>
+</ul>
+<ul class="uk-child-width-expand@s uk-margin-auto uk-text-center" uk-grid="">
+	<li><a href="https://twitter.com/_TiagoEDGE"><i class="ti-twitter-alt"></i> Twitter</a></li>
+	<li><a href="https://steamcommunity.com/id/tiagoedge/"><i class="ti-game"></i> Steam</a></li>
+	<li><a href="https://www.microsoft.com/en-us/search/result.aspx?q=TiagoDanin#nav-apps"><i class="ti-microsoft-alt"></i> Microsoft Store</a></li>
+	<li><a href="https://aur.archlinux.org/packages/?K=TiagoEDGE&amp;SeB=m"><i class="ti-linux"></i> AUR</a></li>
+	<li><a href="https://dev.to/tiagodanin"><i class="ti-comment"></i> Dev.to</a></li>
+	<li><a href="https://atom.io/users/TiagoDanin"><i class="ti-rocket"></i> Atom</a></li>
+</ul>
+<ul class="uk-child-width-expand@s uk-margin-auto uk-text-center" uk-grid="">
+	<li><a href="https://crowdin.com/profile/TiagoDanin"><i class="ti-world"></i> Crowdin</a></li>
+	<li><a href="https://www.npmjs.com/~tiagodanin"><i class="ti-package"></i> NPM</a></li>
+	<li><a href="https://pypi.org/user/TiagoDanin/"><i class="ti-package"></i> Pypi</a></li>
+	<li><a href="https://luarocks.org/modules/tiagodanin/"><i class="ti-package"></i> LuaRocks</a></li>
+	<li><a href="https://stackexchange.com/users/7933368/tiago-danin?tab=accounts"><i class="ti-stack-overflow"></i> StackExchange</a></li>
+	<li><a href="mailto:TiagoDanin@outlook.com"><i class="ti-email"></i> Email</a></li>
+</ul>
+<ul class="uk-child-width-expand@s uk-margin-auto uk-text-center" uk-grid="">
+	<li><a href="https://gitstar-ranking.com/TiagoDanin"><i class="ti-github"></i> Gitstar Ranking</a></li>
+	<li><a href="https://ghuser.io/TiagoDanin"><i class="ti-github"></i> GHUser.io</a></li>
+	<li><a href="https://gitstalk.netlify.com/tiagodanin"><i class="ti-github"></i> Gitstalk</a></li>
+	<li><a href="https://sourcerer.io/tiagodanin"><i class="ti-github"></i> Sourcerer</a></li>
+	<li><a href="https://wakatime.com/@tiagodanin"><i class="ti-timer"></i> WakaTime</a></li>
+	<li><a href="https://github.com/TiagoDanin/dotfiles"><i class="ti-layout-tab"></i> Dotfiles</a></li>
+</ul>
+
+			<hr class="uk-margin-top-remove">
+			<p class="uk-align-center">
+				<small>
+					<span uk-icon="code"></span> with <span uk-icon="heart"></span> by <a href="https://github.com/TiagoDanin">Tiago Danin</a>.
+					<br>Built with <a href="https://jus.js.org" target="_blank">Jus</a> and <a href="https://getuikit.com" target="_blank">UiKit</a> and <a href="https://github.com/CuboHub" target="_blank">CuboHub</a>
+					<br>Hosted in <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</p>
+		</div>
+	</footer>
+	<!--Menu modbile-->
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+						<li class=""><a href="https://github.com/TiagoDanin/Nuxt-SEO">View project on GitHub <i class="ti-github"></i></a></li>
+						
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://tiagodanin.github.io/js/jquery-1.10.2.min.js"></script>
+	<script src="https://tiagodanin.github.io/js/timeline.js"></script>
+</body>
+
+</html>
