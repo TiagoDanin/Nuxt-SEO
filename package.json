@@ -3,7 +3,7 @@
 	"main": "lib/module.js",
 	"bin": {},
 	"preferGlobal": false,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "SEO / HTML Meta Tags Module for Nuxt.js",
 	"author": {
 		"name": "Tiago Danin",
