@@ -55,8 +55,9 @@
 		"debug": "4.1.1"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
+		"ava": "1.4.1",
 		"nuxt": "2.6.2",
 		"vue": "2.6.10"
-	}
+	},
+	"documentation": "./docs.md"
 }
