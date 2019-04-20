@@ -9,5 +9,9 @@ module.exports = {
 	},
 	modules: [
 		require('../lib/module')
-	]
+	],
+	seo: {
+		name: 'App name',
+		description: 'Example app with Nuxt Seo'
+	}
 }
