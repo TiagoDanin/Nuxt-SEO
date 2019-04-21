@@ -89,7 +89,7 @@ yarn add nuxt-seo
 - Default: `false`
 - Type: URL String
 
-### [all]
+### `{...all}`
 `charset`, `lang`, `language`, `copyright`, `name`, `title`, `subtitle`, `author`, `replyTo`, `description`, `keywords`, `url`, `noindex`, `openGraph.name`, `openGraph.title`, `openGraph.description`, `openGraph.locale`, `openGraph.url`, `openGraph.type`, `openGraph.profile.firstName`, `openGraph.profile.lastName`, `openGraph.profile.username`, `openGraph.profile.gender`, `openGraph.profile`, `openGraph.article.publishedTime`, `openGraph.article.modifiedTime`, `openGraph.article.expirationTime`, `openGraph.article.author`, `openGraph.article.section`, `openGraph.article.tag`, `openGraph.article`, `openGraph.image.url`, `openGraph.image.width`, `openGraph.image.height`, `openGraph.image.alt`, `openGraph.image`, `openGraph.price.currency`, `openGraph.price.amount`, `openGraph.price`, `openGraph`, `facebook.appId`, `facebook.pageId`, `facebook`, `twitter.title`, `twitter.description`, `twitter.card`, `twitter.type`, `twitter.site`, `twitter.creator`, `twitter`, `og.name`, `og.title`, `og.description`, `og.locale`, `og.url`, `og.type`, `og.profile.firstName`, `og.profile.lastName`, `og.profile.username`, `og.profile.gender`, `og.profile`, `og.article.publishedTime`, `og.article.modifiedTime`, `og.article.expirationTime`, `og.article.author`, `og.article.section`, `og.article.tag`, `og.article`, `og.image.url`, `og.image.width`, `og.image.height`, `og.image.alt`, `og.image`, `og.price.currency`, `og.price.amount`, `og.price`, `og`, `fb.appId`, `fb.pageId`, `fb`
 
 ### Vue Context
@@ -107,9 +107,6 @@ yarn add nuxt-seo
 				title: 'Home Page',
 				description: 'Hello World Page'
 			})
-		},
-		head: {
-			//title: 'Home Page'
 		}
 	}
 </script>
@@ -130,6 +127,7 @@ yarn test
 
 ## Dev Dependencies
 - [ava](https://ghub.io/ava): Testing can be a drag. AVA helps you get it done.
+- [got](https://ghub.io/got): Simplified HTTP requests
 - [nuxt](https://ghub.io/nuxt): A minimalistic framework for server-rendered Vue.js applications (inspired by Next.js)
 - [vue](https://ghub.io/vue): Reactive, component-oriented view layer for modern web interfaces.
 
