@@ -47,6 +47,36 @@ module.exports = [{
 	name: 'url',
 	content: 'https://tiagodanin.github.io'
 }, {
+	hid: 'og:site_name',
+	key: 'og:site_name',
+	property: 'og:site_name',
+	name: 'og:site_name',
+	content: 'TiagoDanin WebSite'
+}, {
+	hid: 'og:title',
+	key: 'og:title',
+	property: 'og:title',
+	name: 'og:title',
+	content: 'Home Page'
+}, {
+	hid: 'og:description',
+	key: 'og:description',
+	property: 'og:description',
+	name: 'og:description',
+	content: 'About the Tiago Danin'
+}, {
+	hid: 'og:locale',
+	key: 'og:locale',
+	property: 'og:locale',
+	name: 'og:locale',
+	content: 'en'
+}, {
+	hid: 'og:url',
+	key: 'og:url',
+	property: 'og:url',
+	name: 'og:url',
+	content: 'https://tiagodanin.github.io'
+}, {
 	hid: 'og:type',
 	key: 'og:type',
 	property: 'og:type',
