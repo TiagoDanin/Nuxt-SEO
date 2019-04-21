@@ -5,7 +5,7 @@ const config = require('../example/nuxt.config')
 let nuxt = null
 
 test.before('Init Nuxt.js', async t => {
-	config.dev = false
+	config.dev = true
 	config.mode = 'universal'
 	nuxt = new Nuxt(config)
 	await new Builder(nuxt).build()
@@ -15,8 +15,9 @@ test.before('Init Nuxt.js', async t => {
 test('Route / and render HTML', async t => {
 	let context = {}
 	const { html } = await nuxt.renderRoute('/', context)
+
 	t.true(html.includes(`<title data-n-head="true">Home Page</title>`))
-	t.true(html.includes(`<meta data-n-head="true" charset="utf-8">`))
+	t.true(html.includes(`<meta data-n-head="true" charset="utf-8"`))
 	t.true(html.includes(`<meta data-n-head="true" lang="en">`))
 	t.true(html.includes(`<meta data-n-head="true" language="English">`))
 	t.true(html.includes(`<meta data-n-head="true" data-hid="name" key="name" property="name" name="name" content="App name">`))
