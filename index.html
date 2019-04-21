@@ -111,25 +111,36 @@ yarn add nuxt-seo</code></pre>
 		<span class="hljs-comment">// Module options</span>
 		name: <span class="hljs-string">'&#x3C;name of site>'</span>,
 		<span class="hljs-attr">title</span>: <span class="hljs-string">'&#x3C;title default>'</span>,
+		<span class="hljs-attr">templateTitle</span>: <span class="hljs-string">'%name% - %title%'</span>,
 		<span class="hljs-attr">description</span>: <span class="hljs-string">'&#x3C;description default'</span>
 		<span class="hljs-comment">//...</span>
 	}
 }</code></pre>
 <h3 id="module-options"><a href="#module-options">Module options</a></h3>
-<h4 id="name"><a href="#name"><code>name</code></a></h4>
-<ul>
-<li>Default: <code>false</code></li>
-<li>Type: String</li>
-</ul>
 <h4 id="charset"><a href="#charset"><code>charset</code></a></h4>
 <ul>
 <li>Default: <code>utf-8</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="name"><a href="#name"><code>name</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
 <li>Type: String</li>
 </ul>
 <h4 id="title"><a href="#title"><code>title</code></a></h4>
 <ul>
 <li>Default: <code>TITLE</code></li>
 <li>Type: String</li>
+</ul>
+<h4 id="description"><a href="#description"><code>description</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Type: String</li>
+</ul>
+<h4 id="keywords"><a href="#keywords"><code>keywords</code></a></h4>
+<ul>
+<li>Default: <code>[]</code></li>
+<li>Type: Array[...keywords] || String</li>
 </ul>
 <h4 id="lang"><a href="#lang"><code>lang</code></a></h4>
 <ul>
@@ -146,31 +157,23 @@ yarn add nuxt-seo</code></pre>
 <li>Default: <code>false</code></li>
 <li>Type: URL String</li>
 </ul>
-<h4 id="description"><a href="#description"><code>description</code></a></h4>
-<ul>
-<li>Default: <code>false</code></li>
-<li>Type: String</li>
-</ul>
-<h4 id="keywords"><a href="#keywords"><code>keywords</code></a></h4>
-<ul>
-<li>Default: <code>[]</code></li>
-<li>Type: Array[...keywords] || String</li>
-</ul>
-<h4 id="type"><a href="#type"><code>type</code></a></h4>
-<ul>
-<li>Default: <code>false</code></li>
-<li>Types: <a href="http://ogp.me/#types">ogp.me/#types</a></li>
-</ul>
 <h3 id="author"><a href="#author"><code>author</code></a></h3>
 <ul>
 <li>Default: <code>false</code></li>
 <li>Type: Array[name, email || site] || String</li>
+</ul>
+<h4 id="opengraphtype"><a href="#opengraphtype"><code>openGraph.type</code></a></h4>
+<ul>
+<li>Default: <code>false</code></li>
+<li>Types: <a href="http://ogp.me/#types">ogp.me/#types</a></li>
 </ul>
 <h4 id="url"><a href="#url"><code>url</code></a></h4>
 <ul>
 <li>Default: <code>false</code></li>
 <li>Type: URL String</li>
 </ul>
+<h3 id="all"><a href="#all">[all]</a></h3>
+<p><code>charset</code>, <code>lang</code>, <code>language</code>, <code>copyright</code>, <code>name</code>, <code>title</code>, <code>subtitle</code>, <code>author</code>, <code>replyTo</code>, <code>description</code>, <code>keywords</code>, <code>url</code>, <code>noindex</code>, <code>openGraph.name</code>, <code>openGraph.title</code>, <code>openGraph.description</code>, <code>openGraph.locale</code>, <code>openGraph.url</code>, <code>openGraph.type</code>, <code>openGraph.profile.firstName</code>, <code>openGraph.profile.lastName</code>, <code>openGraph.profile.username</code>, <code>openGraph.profile.gender</code>, <code>openGraph.profile</code>, <code>openGraph.article.publishedTime</code>, <code>openGraph.article.modifiedTime</code>, <code>openGraph.article.expirationTime</code>, <code>openGraph.article.author</code>, <code>openGraph.article.section</code>, <code>openGraph.article.tag</code>, <code>openGraph.article</code>, <code>openGraph.image.url</code>, <code>openGraph.image.width</code>, <code>openGraph.image.height</code>, <code>openGraph.image.alt</code>, <code>openGraph.image</code>, <code>openGraph.price.currency</code>, <code>openGraph.price.amount</code>, <code>openGraph.price</code>, <code>openGraph</code>, <code>facebook.appId</code>, <code>facebook.pageId</code>, <code>facebook</code>, <code>twitter.title</code>, <code>twitter.description</code>, <code>twitter.card</code>, <code>twitter.type</code>, <code>twitter.site</code>, <code>twitter.creator</code>, <code>twitter</code>, <code>og.name</code>, <code>og.title</code>, <code>og.description</code>, <code>og.locale</code>, <code>og.url</code>, <code>og.type</code>, <code>og.profile.firstName</code>, <code>og.profile.lastName</code>, <code>og.profile.username</code>, <code>og.profile.gender</code>, <code>og.profile</code>, <code>og.article.publishedTime</code>, <code>og.article.modifiedTime</code>, <code>og.article.expirationTime</code>, <code>og.article.author</code>, <code>og.article.section</code>, <code>og.article.tag</code>, <code>og.article</code>, <code>og.image.url</code>, <code>og.image.width</code>, <code>og.image.height</code>, <code>og.image.alt</code>, <code>og.image</code>, <code>og.price.currency</code>, <code>og.price.amount</code>, <code>og.price</code>, <code>og</code>, <code>fb.appId</code>, <code>fb.pageId</code>, <code>fb</code></p>
 <h3 id="vue-context"><a href="#vue-context">Vue Context</a></h3>
 <ul>
 <li><code>asyncData: function({ seo }) { seo(options) }</code></li>
