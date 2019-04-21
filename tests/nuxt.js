@@ -1,11 +1,15 @@
 const test = require('ava')
 const { Nuxt, Builder } = require('nuxt')
 const config = require('../example/nuxt.config')
+const got = require('got')
+
+const url = path => `http://localhost:4000${path}`
+const get = path => got(url(path)).then(res => res.body)
 
 let nuxt = null
 
 test.before('Init Nuxt.js', async t => {
-	config.dev = true
+	config.dev = false
 	config.mode = 'universal'
 	nuxt = new Nuxt(config)
 	await new Builder(nuxt).build()
@@ -14,7 +18,7 @@ test.before('Init Nuxt.js', async t => {
 
 test('Route / and render HTML', async t => {
 	let context = {}
-	const { html } = await nuxt.renderRoute('/', context)
+	const html = await get('/')
 
 	t.true(html.includes(`<title data-n-head="true">Home Page</title>`))
 	t.true(html.includes(`<meta data-n-head="true" charset="utf-8"`))
@@ -27,7 +31,7 @@ test('Route / and render HTML', async t => {
 
 test('Route /post and render HTML', async t => {
 	let context = {}
-	const { html } = await nuxt.renderRoute('/post', context)
+	const html = await get('/post')
 	t.true(html.includes(`<title data-n-head="true">Hello</title>`))
 	t.true(html.includes(`<meta data-n-head="true" charset="utf-8">`))
 	t.true(html.includes(`<meta data-n-head="true" lang="en">`))
