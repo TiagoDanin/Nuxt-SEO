@@ -29,6 +29,12 @@ module.exports = [{
 	name: 'subtitle',
 	content: 'About page'
 }, {
+	hid: 'author',
+	key: 'author',
+	property: 'author',
+	name: 'author',
+	content: 'Tiago Danin,TiagoDanin@outlook.com'
+}, {
 	hid: 'reply-to',
 	key: 'reply-to',
 	property: 'reply-to',
@@ -41,81 +47,27 @@ module.exports = [{
 	name: 'description',
 	content: 'About the Tiago Danin'
 }, {
+	hid: 'keywords',
+	key: 'keywords',
+	property: 'keywords',
+	name: 'keywords',
+	content: 'Tiago,Danin,about'
+}, {
 	hid: 'url',
 	key: 'url',
 	property: 'url',
 	name: 'url',
 	content: 'https://tiagodanin.github.io'
 }, {
-	hid: 'og:site_name',
-	key: 'og:site_name',
-	property: 'og:site_name',
-	name: 'og:site_name',
-	content: 'TiagoDanin WebSite'
+	hid: 'robots',
+	key: 'robots',
+	property: 'robots',
+	name: 'robots',
+	content: 'index,follow'
 }, {
-	hid: 'og:title',
-	key: 'og:title',
-	property: 'og:title',
-	name: 'og:title',
-	content: 'Home Page'
-}, {
-	hid: 'og:description',
-	key: 'og:description',
-	property: 'og:description',
-	name: 'og:description',
-	content: 'About the Tiago Danin'
-}, {
-	hid: 'og:locale',
-	key: 'og:locale',
-	property: 'og:locale',
-	name: 'og:locale',
-	content: 'en'
-}, {
-	hid: 'og:url',
-	key: 'og:url',
-	property: 'og:url',
-	name: 'og:url',
-	content: 'https://tiagodanin.github.io'
-}, {
-	hid: 'og:type',
-	key: 'og:type',
-	property: 'og:type',
-	name: 'og:type',
-	content: 'profile'
-}, {
-	hid: 'og:image',
-	key: 'og:image',
-	property: 'og:image',
-	name: 'og:image',
-	content: 'https://avatars3.githubusercontent.com/u/5731176?s=460&v=4'
-}, {
-	hid: 'og:image:width',
-	key: 'og:image:width',
-	property: 'og:image:width',
-	name: 'og:image:width',
-	content: '460'
-}, {
-	hid: 'og:image:height',
-	key: 'og:image:height',
-	property: 'og:image:height',
-	name: 'og:image:height',
-	content: '460'
-}, {
-	hid: 'og:image:alt',
-	key: 'og:image:alt',
-	property: 'og:image:alt',
-	name: 'og:image:alt',
-	content: 'My Photo - Tiago Danin'
-}, {
-	hid: 'fb:app_id',
-	key: 'fb:app_id',
-	property: 'fb:app_id',
-	name: 'fb:app_id',
-	content: '123456'
-}, {
-	hid: 'fb:page_id',
-	key: 'fb:page_id',
-	property: 'fb:page_id',
-	name: 'fb:page_id',
-	content: '123456'
+	hid: 'googlebot',
+	key: 'googlebot',
+	property: 'googlebot',
+	name: 'googlebot',
+	content: 'index,follow'
 }]

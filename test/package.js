@@ -20,7 +20,7 @@ test('createTitle with name + title', async t => {
 	t.true(title == 'app - test')
 })
 
-test('createMeta with all meta', async t => {
+test('createMeta with all meta basic', async t => {
 	const options = {...nuxtSeo.defaults}
 	options.charset = 'utf-8'
 	options.lang = 'en'
@@ -34,20 +34,7 @@ test('createMeta with all meta', async t => {
 	options.description = 'About the Tiago Danin'
 	options.keywords = ['Tiago', 'Danin', 'about']
 	options.url = 'https://tiagodanin.github.io'
-	options.noindex = ['index', 'follow']
-	options.openGraph = {
-		type: 'profile',
-		image: {
-			url: 'https://avatars3.githubusercontent.com/u/5731176?s=460&v=4',
-			width: 460,
-			height: 460,
-			alt: 'My Photo - Tiago Danin',
-		}
-	}
-	options.facebook = {
-		appId: 123456,
-		pageId: 123456
-	}
+	options.noindex = true
 
 	const inputMeta = [{lang: 'pt'}]
 	const template = nuxtSeo.template
@@ -126,4 +113,16 @@ test('replace inputMeta with output of createMeta', async t => {
 
 	t.true(Boolean(meta.find((e) => e.content == 'https://test.com' && e.key == 'url')))
 	t.false(Boolean(meta.find((e) => e.content == 'https://ddd.com' && e.key == 'url')))
+})
+
+test('createMeta with noindex = true', async t => {
+	const options = {...nuxtSeo.defaults}
+	const inputMeta = []
+	const template = nuxtSeo.template
+
+	options.noindex = true
+	const meta = nuxtSeo.createMeta(options, inputMeta, template)
+
+	t.true(Boolean(meta.find((e) => e.content == 'index,follow' && e.key == 'robots')))
+	t.true(Boolean(meta.find((e) => e.content == 'index,follow' && e.key == 'googlebot')))
 })
