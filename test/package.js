@@ -1,17 +1,27 @@
 const test = require('ava')
 const nuxtSeo = require('../lib/module')
 
-test('createTitle method', async t => {
+test('createTitle with two title', async t => {
 	const title = nuxtSeo.createTitle({
 		title: 'test',
 		templateTitle: '%title% - %title%'
 	})
-	console.log(title)
+
 	t.true(title == 'test - test')
 })
 
+test('createTitle with name + title', async t => {
+	const title = nuxtSeo.createTitle({
+		title: 'test',
+		name: 'app',
+		templateTitle: '%name% - %title%'
+	})
+
+	t.true(title == 'app - test')
+})
+
 test('createMeta with all meta', async t => {
-	let options = nuxtSeo.defaults
+	const options = {...nuxtSeo.defaults}
 	options.charset = 'utf-8'
 	options.lang = 'en'
 	options.language = 'English'
@@ -57,4 +67,67 @@ test('createMeta with options no valid', async t => {
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
 	t.true(JSON.stringify(meta) == JSON.stringify([]))
+})
+
+test('createMeta with array in openGraph.image', async t => {
+	const options = {...nuxtSeo.defaults}
+	const inputMeta = [{lang: 'pt'}]
+	const template = nuxtSeo.template
+
+	options.openGraph = {
+		image: [{
+			url: 'https://1.jpg',
+			alt: 'Photo test 1',
+		}, {
+			url: 'https://2.jpg',
+			alt: 'Photo test 2',
+		}]
+	}
+	const meta01 = nuxtSeo.createMeta(options, inputMeta, template)
+
+	options.openGraph = {
+		image: ['https://1.jpg', 'https://2.jpg']
+	}
+	const meta02 = nuxtSeo.createMeta(options, inputMeta, template)
+
+	t.true(Boolean(meta01.find((e) => e.content == 'https://1.jpg' && e.key == 'og:image:00')))
+	t.true(Boolean(meta01.find((e) => e.content == 'Photo test 2' && e.key == 'og:image:alt:01')))
+
+	t.true(Boolean(meta02.find((e) => e.content == 'https://1.jpg' && e.key == 'og:image:00')))
+	t.true(Boolean(meta02.find((e) => e.content == 'https://2.jpg' && e.key == 'og:image:01')))
+})
+
+test('createMeta with array in openGraph.article.author', async t => {
+	const options = {...nuxtSeo.defaults}
+	const inputMeta = [{lang: 'pt'}]
+	const template = nuxtSeo.template
+
+	options.openGraph = {
+		article: {
+			author: ['Tiago Danin', 'Danin Tiago']
+		}
+	}
+	const meta = nuxtSeo.createMeta(options, inputMeta, template)
+
+	console.log('\n-\n-\n-')
+	console.log(meta)
+	console.log('\n-\n-\n-')
+
+	t.true(Boolean(meta.find((e) => e.content == 'Tiago Danin' && e.key == 'article:author:00')))
+	t.true(Boolean(meta.find((e) => e.content == 'Danin Tiago' && e.key == 'article:author:01')))
+})
+
+test('replace inputMeta with output of createMeta', async t => {
+	const options = {...nuxtSeo.defaults}
+	const inputMeta = [
+		{ lang: 'pt' },
+		{ key: 'url', content: 'https://ddd.com' }
+	]
+	const template = nuxtSeo.template
+
+	options.url = 'https://test.com'
+	const meta = nuxtSeo.createMeta(options, inputMeta, template)
+
+	t.true(Boolean(meta.find((e) => e.content == 'https://test.com' && e.key == 'url')))
+	t.false(Boolean(meta.find((e) => e.content == 'https://ddd.com' && e.key == 'url')))
 })
