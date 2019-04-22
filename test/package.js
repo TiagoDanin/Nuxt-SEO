@@ -109,10 +109,6 @@ test('createMeta with array in openGraph.article.author', async t => {
 	}
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	console.log('\n-\n-\n-')
-	console.log(meta)
-	console.log('\n-\n-\n-')
-
 	t.true(Boolean(meta.find((e) => e.content == 'Tiago Danin' && e.key == 'article:author:00')))
 	t.true(Boolean(meta.find((e) => e.content == 'Danin Tiago' && e.key == 'article:author:01')))
 })
