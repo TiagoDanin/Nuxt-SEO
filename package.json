@@ -1,7 +1,6 @@
 {
 	"name": "nuxt-seo",
 	"main": "lib/module.js",
-	"bin": {},
 	"preferGlobal": false,
 	"version": "1.1.0",
 	"description": "SEO / HTML Meta Tags Module for Nuxt.js",
@@ -12,6 +11,8 @@
 	},
 	"license": "MIT",
 	"keywords": [
+		"html-meta",
+		"meta",
 		"nuxt",
 		"nuxt-module",
 		"nuxtjs",
@@ -19,11 +20,9 @@
 		"seo-meta",
 		"seo-optimization",
 		"seo-plugin",
+		"social-media",
 		"vue",
-		"vuejs",
-		"html-meta",
-		"meta",
-		"social-media"
+		"vuejs"
 	],
 	"scripts": {
 		"start": "nuxt example",
@@ -48,7 +47,7 @@
 	"files": [
 		"LICENSE",
 		"README.md",
-		"index.js",
+		"lib",
 		"package.json"
 	],
 	"dependencies": {
