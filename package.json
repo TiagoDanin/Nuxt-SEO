@@ -51,13 +51,13 @@
 		"package.json"
 	],
 	"dependencies": {
-		"debug": "4.1.1"
+		"debug": "^4.1.1"
 	},
 	"devDependencies": {
-		"ava": "1.4.1",
-		"got": "9.6.0",
-		"nuxt": "2.6.3",
-		"vue": "2.6.10"
+		"ava": "^1.4.1",
+		"got": "^9.6.0",
+		"nuxt": "^2.6.3",
+		"vue": "^2.6.10"
 	},
 	"documentation": "./docs.md"
 }
