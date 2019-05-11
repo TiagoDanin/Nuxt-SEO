@@ -1,11 +1,17 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "assignees": [
-    "TiagoDanin"
-  ],
-  "labels": [
-    "renovate"
-  ]
+	"extends": [
+		"config:base"
+	],
+	"assignees": [
+		"TiagoDanin"
+	],
+	"labels": [
+		"renovate"
+	],
+	"rangeStrategy": "bump",
+	"statusCheckVerify": true,
+	"vulnerabilityAlerts": {
+		"labels": ["security"],
+		"assignees": ["TiagoDanin"]
+	}
 }
