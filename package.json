@@ -59,5 +59,10 @@
 		"nuxt": "^2.6.3",
 		"vue": "^2.6.10"
 	},
-	"documentation": "./docs.md"
+	"documentation": "./docs.md",
+	"ava": {
+		"files": [
+			"!test/fixtures/all.js"
+		]
+	}
 }
