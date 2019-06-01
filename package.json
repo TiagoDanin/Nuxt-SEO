@@ -56,7 +56,7 @@
 	"devDependencies": {
 		"ava": "^2.0.0",
 		"got": "^9.6.0",
-		"nuxt": "^2.6.3",
+		"nuxt": "^2.8.0",
 		"vue": "^2.6.10"
 	},
 	"documentation": "./docs.md",
