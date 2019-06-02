@@ -1,26 +1,26 @@
 const test = require('ava')
 const nuxtSeo = require('../lib/module')
 
-test('createTitle with two title', async t => {
+test('createTitle with two title', t => {
 	const title = nuxtSeo.createTitle({
 		title: 'test',
 		templateTitle: '%title% - %title%'
 	})
 
-	t.true(title == 'test - test')
+	t.true(title === 'test - test')
 })
 
-test('createTitle with name + title', async t => {
+test('createTitle with name + title', t => {
 	const title = nuxtSeo.createTitle({
 		title: 'test',
 		name: 'app',
 		templateTitle: '%name% - %title%'
 	})
 
-	t.true(title == 'app - test')
+	t.true(title === 'app - test')
 })
 
-test('createMeta with all meta basic', async t => {
+test('createMeta with all meta basic', t => {
 	const options = {...nuxtSeo.defaults}
 	options.charset = 'utf-8'
 	options.lang = 'en'
@@ -37,37 +37,37 @@ test('createMeta with all meta basic', async t => {
 	options.noindex = true
 
 	const inputMeta = [{lang: 'pt'}]
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 	const done = require('./fixtures/all.js')
 
-	t.true(JSON.stringify(meta) == JSON.stringify(done))
+	t.true(JSON.stringify(meta) === JSON.stringify(done))
 })
 
-test('createMeta with options no valid', async t => {
+test('createMeta with options no valid', t => {
 	const options = {
 		notValid: true
 	}
 
 	const inputMeta = []
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(JSON.stringify(meta) == JSON.stringify([]))
+	t.true(JSON.stringify(meta) === JSON.stringify([]))
 })
 
-test('createMeta with array in openGraph.image', async t => {
+test('createMeta with array in openGraph.image', t => {
 	const options = {...nuxtSeo.defaults}
 	const inputMeta = [{lang: 'pt'}]
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 
 	options.openGraph = {
 		image: [{
 			url: 'https://1.jpg',
-			alt: 'Photo test 1',
+			alt: 'Photo test 1'
 		}, {
 			url: 'https://2.jpg',
-			alt: 'Photo test 2',
+			alt: 'Photo test 2'
 		}]
 	}
 	const meta01 = nuxtSeo.createMeta(options, inputMeta, template)
@@ -77,17 +77,17 @@ test('createMeta with array in openGraph.image', async t => {
 	}
 	const meta02 = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta01.find((e) => e.content == 'https://1.jpg' && e.key == 'og:image:00')))
-	t.true(Boolean(meta01.find((e) => e.content == 'Photo test 2' && e.key == 'og:image:alt:01')))
+	t.true(Boolean(meta01.find(e => e.content === 'https://1.jpg' && e.key === 'og:image:00')))
+	t.true(Boolean(meta01.find(e => e.content === 'Photo test 2' && e.key === 'og:image:alt:01')))
 
-	t.true(Boolean(meta02.find((e) => e.content == 'https://1.jpg' && e.key == 'og:image:00')))
-	t.true(Boolean(meta02.find((e) => e.content == 'https://2.jpg' && e.key == 'og:image:01')))
+	t.true(Boolean(meta02.find(e => e.content === 'https://1.jpg' && e.key === 'og:image:00')))
+	t.true(Boolean(meta02.find(e => e.content === 'https://2.jpg' && e.key === 'og:image:01')))
 })
 
-test('createMeta with array in openGraph.article.author', async t => {
+test('createMeta with array in openGraph.article.author', t => {
 	const options = {...nuxtSeo.defaults}
 	const inputMeta = [{lang: 'pt'}]
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 
 	options.openGraph = {
 		article: {
@@ -96,33 +96,33 @@ test('createMeta with array in openGraph.article.author', async t => {
 	}
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find((e) => e.content == 'Tiago Danin' && e.key == 'article:author:00')))
-	t.true(Boolean(meta.find((e) => e.content == 'Danin Tiago' && e.key == 'article:author:01')))
+	t.true(Boolean(meta.find(e => e.content === 'Tiago Danin' && e.key === 'article:author:00')))
+	t.true(Boolean(meta.find(e => e.content === 'Danin Tiago' && e.key === 'article:author:01')))
 })
 
-test('replace inputMeta with output of createMeta', async t => {
+test('replace inputMeta with output of createMeta', t => {
 	const options = {...nuxtSeo.defaults}
 	const inputMeta = [
-		{ lang: 'pt' },
-		{ key: 'url', content: 'https://ddd.com' }
+		{lang: 'pt'},
+		{key: 'url', content: 'https://ddd.com'}
 	]
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 
 	options.url = 'https://test.com'
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find((e) => e.content == 'https://test.com' && e.key == 'url')))
-	t.false(Boolean(meta.find((e) => e.content == 'https://ddd.com' && e.key == 'url')))
+	t.true(Boolean(meta.find(e => e.content === 'https://test.com' && e.key === 'url')))
+	t.false(Boolean(meta.find(e => e.content === 'https://ddd.com' && e.key === 'url')))
 })
 
-test('createMeta with noindex = true', async t => {
+test('createMeta with noindex = true', t => {
 	const options = {...nuxtSeo.defaults}
 	const inputMeta = []
-	const template = nuxtSeo.template
+	const {template} = nuxtSeo
 
 	options.noindex = true
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find((e) => e.content == 'index,follow' && e.key == 'robots')))
-	t.true(Boolean(meta.find((e) => e.content == 'index,follow' && e.key == 'googlebot')))
+	t.true(Boolean(meta.find(e => e.content === 'index,follow' && e.key === 'robots')))
+	t.true(Boolean(meta.find(e => e.content === 'index,follow' && e.key === 'googlebot')))
 })

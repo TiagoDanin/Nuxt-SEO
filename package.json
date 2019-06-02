@@ -5,8 +5,8 @@
 	"version": "1.2.0",
 	"description": "SEO / HTML Meta Tags Module for Nuxt.js",
 	"author": {
-		"name": "Tiago Danin",
 		"email": "TiagoDanin@outlook.com",
+		"name": "Tiago Danin",
 		"url": "https://TiagoDanin.github.io"
 	},
 	"license": "MIT",
@@ -26,7 +26,7 @@
 	],
 	"scripts": {
 		"start": "nuxt example",
-		"test": "ava"
+		"test": "xo && ava"
 	},
 	"engines": {
 		"node": ">= 8"
@@ -57,7 +57,22 @@
 		"ava": "^2.0.0",
 		"got": "^9.6.0",
 		"nuxt": "^2.8.0",
-		"vue": "^2.6.10"
+		"vue": "^2.6.10",
+		"xo": "^0.24.0"
+	},
+	"xo": {
+		"ignores": [
+			"lib/plugin.js"
+		],
+		"rules": {
+			"quote-props": "warn",
+			"eqeqeq": "warn",
+			"array-callback-return": "warn",
+			"require-atomic-updates": "warn",
+			"no-else-return": "off",
+			"ava/no-ignored-test-files": "off"
+		},
+		"semicolon": false
 	},
 	"documentation": "./docs.md",
 	"ava": {
