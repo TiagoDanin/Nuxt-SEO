@@ -1673,10 +1673,10 @@ autoprefixer@^9.4.9:
     postcss "^7.0.14"
     postcss-value-parser "^3.3.1"
 
-ava@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-2.0.0.tgz#265f9a094f83d0a78c05654e37302645d59ca1fa"
-  integrity sha512-tOfO3yQhKiSECIjST8Xi99l7Bja9EG5hgZFKc92xNZh/6pnct97vWDKENyATBvZIXpdCClSMtGgOX2UaGq+OJA==
+ava@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ava/-/ava-2.1.0.tgz#158c5cdf48d1556caf0a9fdf96b61af9e566c153"
+  integrity sha512-IaS+l1KfYtFpJlDZXrNG0M6SGr/DUvwJmTiaTaW2lMdEezCAJc5J/hNAQWIKigkmxIOURYT29atD/qyp+zq+wg==
   dependencies:
     "@ava/babel-preset-stage-4" "^3.0.0"
     "@ava/babel-preset-transform-test-files" "^5.0.0"
@@ -1694,7 +1694,7 @@ ava@^2.0.0:
     arrify "^2.0.1"
     bluebird "^3.5.5"
     chalk "^2.4.2"
-    chokidar "^3.0.0"
+    chokidar "^3.0.1"
     chunkd "^1.0.0"
     ci-parallel-vars "^1.0.0"
     clean-stack "^2.1.0"
@@ -1708,7 +1708,7 @@ ava@^2.0.0:
     currently-unhandled "^0.4.1"
     debug "^4.1.1"
     del "^4.1.1"
-    dot-prop "^5.0.0"
+    dot-prop "^5.0.1"
     emittery "^0.4.1"
     empower-core "^1.2.0"
     equal-length "^1.0.0"
@@ -1733,7 +1733,7 @@ ava@^2.0.0:
     md5-hex "^3.0.0"
     meow "^5.0.0"
     micromatch "^4.0.2"
-    ms "^2.1.1"
+    ms "^2.1.2"
     observable-to-promise "^1.0.0"
     ora "^3.4.0"
     package-hash "^4.0.0"
@@ -2269,22 +2269,6 @@ chokidar@^2.0.2:
     upath "^1.1.1"
   optionalDependencies:
     fsevents "^1.2.7"
-
-chokidar@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.0.0.tgz#6b538f0fd6d5d31d5dd2b59e05426bec0f49aa40"
-  integrity sha512-ebzWopcacB2J19Jsb5RPtMrzmjUZ5VAQnsL0Ztrix3lswozHbiDp+1Lg3AWSKHdwsps/W2vtshA/x3I827F78g==
-  dependencies:
-    anymatch "^3.0.1"
-    async-each "^1.0.3"
-    braces "^3.0.2"
-    glob-parent "^5.0.0"
-    is-binary-path "^2.1.0"
-    is-glob "^4.0.1"
-    normalize-path "^3.0.0"
-    readdirp "^3.0.1"
-  optionalDependencies:
-    fsevents "^2.0.6"
 
 chokidar@^3.0.1:
   version "3.0.1"
@@ -3321,10 +3305,10 @@ dot-prop@^4.1.0, dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
-dot-prop@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-5.0.0.tgz#64b7968af349c3a9f966aa12658dbd5829f6b953"
-  integrity sha512-RTmaF2jx3nOBO2GvtFqjnDLycjFUMqt+2pwRx7JVYa81lDauoj9aNkyrJI2ikR58FbBIchiIlRiGG+muLJ4oHQ==
+dot-prop@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-5.0.1.tgz#e26c283bd1f10aab01e782371a751fb52cc3cb1c"
+  integrity sha512-5BKAm3KC6kgHOm5WqekMXd0HHRhilE0aJzBuOqtrPo2RDS2FTaOeuF5CEsHvZ8ETfjC9N3BufL6sxEMV8w/IIA==
   dependencies:
     is-obj "^1.0.0"
 
@@ -5993,6 +5977,11 @@ ms@2.1.1, ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
+ms@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
 multimatch@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/multimatch/-/multimatch-2.1.0.tgz#9c7906a22fb4c02919e2f5f75161b4cdbd4b2a2b"
@@ -7709,13 +7698,6 @@ readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
-
-readdirp@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.0.1.tgz#14a8875883c5575c235579624a1e177cb0b1ec58"
-  integrity sha512-emMp13NEwWQQX1yeDgrzDNCSY7NHV6k9HTW0OhyQqOAzYacbqQhnmWiCYjxNPcqMTQ9k77oXQJp28jkytm3+jg==
-  dependencies:
-    picomatch "^2.0.4"
 
 readdirp@^3.0.2:
   version "3.0.2"
