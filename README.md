@@ -121,15 +121,45 @@ yarn test
 
 ## Dependencies
 
-- [debug](https://ghub.io/debug): small debugging utility
+<details>
+	<summary><a href="https://ghub.io/debug">debug</a>: small debugging utility</summary>
+	<b>Author</b>: TJ Holowaychuk</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^4.1.1
+</details>
 
 ## Dev Dependencies
 
-- [ava](https://ghub.io/ava): Testing can be a drag. AVA helps you get it done.
-- [got](https://ghub.io/got): Simplified HTTP requests
-- [nuxt](https://ghub.io/nuxt): A minimalistic framework for server-rendered Vue.js applications (inspired by Next.js)
-- [vue](https://ghub.io/vue): Reactive, component-oriented view layer for modern web interfaces.
-- [xo](https://ghub.io/xo): JavaScript happiness style linter ❤️
+<details>
+	<summary><a href="https://ghub.io/ava">ava</a>: Testing can be a drag. AVA helps you get it done.</summary>
+	<b>Author</b>: novemberborn, sindresorhus, vdemedes</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^2.3.0
+</details>
+<details>
+	<summary><a href="https://ghub.io/got">got</a>: Simplified HTTP requests</summary>
+	<b>Author</b>: sindresorhus, szmarczak</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^9.6.0
+</details>
+<details>
+	<summary><a href="https://ghub.io/nuxt">nuxt</a>: A minimalistic framework for server-rendered Vue.js applications (inspired by Next.js)</summary>
+	<b>Author</b>: atinux</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^2.9.2
+</details>
+<details>
+	<summary><a href="https://ghub.io/vue">vue</a>: Reactive, component-oriented view layer for modern web interfaces.</summary>
+	<b>Author</b>: Evan You</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^2.6.10
+</details>
+<details>
+	<summary><a href="https://ghub.io/xo">xo</a>: JavaScript happiness style linter ❤️</summary>
+	<b>Author</b>: Sindre Sorhus</br>
+	<b>License</b>: MIT</br>
+	<b>Version</b>: ^0.24.0
+</details>
 
 ## Contributors
 
