@@ -19,6 +19,10 @@ test.before('Init Nuxt.js', async () => {
 	nuxt.listen(4000, 'localhost')
 })
 
+test.after('Closing server', () => {
+	nuxt.close()
+})
+
 test('Route / and render HTML', async t => {
 	const html = await get('/')
 
@@ -44,8 +48,4 @@ test('Route /post and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:title" key="og:title" property="og:title" name="og:title" content="openGraph title">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:description" key="og:description" property="og:description" name="og:description" content="Hello World page in blog">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:locale" key="og:locale" property="og:locale" name="og:locale" content="en">'))
-})
-
-test.after('Closing server', () => {
-	nuxt.close()
 })
