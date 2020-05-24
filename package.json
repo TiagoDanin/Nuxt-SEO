@@ -79,5 +79,9 @@
 		"files": [
 			"!test/fixtures/all.js"
 		]
+	},
+	"resolutions": {
+		"yargs-parser": "^18.1.2",
+		"kind-of": "^6.0.3"
 	}
 }
