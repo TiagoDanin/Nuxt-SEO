@@ -17,12 +17,6 @@ module.exports = [{
 	name: 'name',
 	content: 'TiagoDanin WebSite'
 }, {
-	hid: 'title',
-	key: 'title',
-	property: 'title',
-	name: 'title',
-	content: 'Home Page'
-}, {
 	hid: 'subtitle',
 	key: 'subtitle',
 	property: 'subtitle',

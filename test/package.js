@@ -77,11 +77,11 @@ test('createMeta with array in openGraph.image', t => {
 	}
 	const meta02 = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta01.find(e => e.content === 'https://1.jpg' && e.key === 'og:image:00')))
-	t.true(Boolean(meta01.find(e => e.content === 'Photo test 2' && e.key === 'og:image:alt:01')))
+	t.true(Boolean(meta01.find(element => element.content === 'https://1.jpg' && element.key === 'og:image:00')))
+	t.true(Boolean(meta01.find(element => element.content === 'Photo test 2' && element.key === 'og:image:alt:01')))
 
-	t.true(Boolean(meta02.find(e => e.content === 'https://1.jpg' && e.key === 'og:image:00')))
-	t.true(Boolean(meta02.find(e => e.content === 'https://2.jpg' && e.key === 'og:image:01')))
+	t.true(Boolean(meta02.find(element => element.content === 'https://1.jpg' && element.key === 'og:image:00')))
+	t.true(Boolean(meta02.find(element => element.content === 'https://2.jpg' && element.key === 'og:image:01')))
 })
 
 test('createMeta with array in openGraph.article.author', t => {
@@ -96,8 +96,8 @@ test('createMeta with array in openGraph.article.author', t => {
 	}
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find(e => e.content === 'Tiago Danin' && e.key === 'article:author:00')))
-	t.true(Boolean(meta.find(e => e.content === 'Danin Tiago' && e.key === 'article:author:01')))
+	t.true(Boolean(meta.find(element => element.content === 'Tiago Danin' && element.key === 'article:author:00')))
+	t.true(Boolean(meta.find(element => element.content === 'Danin Tiago' && element.key === 'article:author:01')))
 })
 
 test('replace inputMeta with output of createMeta', t => {
@@ -111,8 +111,8 @@ test('replace inputMeta with output of createMeta', t => {
 	options.url = 'https://test.com'
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find(e => e.content === 'https://test.com' && e.key === 'url')))
-	t.false(Boolean(meta.find(e => e.content === 'https://ddd.com' && e.key === 'url')))
+	t.true(Boolean(meta.find(element => element.content === 'https://test.com' && element.key === 'url')))
+	t.false(Boolean(meta.find(element => element.content === 'https://ddd.com' && element.key === 'url')))
 })
 
 test('createMeta with noindex = true', t => {
@@ -123,6 +123,6 @@ test('createMeta with noindex = true', t => {
 	options.noindex = true
 	const meta = nuxtSeo.createMeta(options, inputMeta, template)
 
-	t.true(Boolean(meta.find(e => e.content === 'index,follow' && e.key === 'robots')))
-	t.true(Boolean(meta.find(e => e.content === 'index,follow' && e.key === 'googlebot')))
+	t.true(Boolean(meta.find(element => element.content === 'index,follow' && element.key === 'robots')))
+	t.true(Boolean(meta.find(element => element.content === 'index,follow' && element.key === 'googlebot')))
 })

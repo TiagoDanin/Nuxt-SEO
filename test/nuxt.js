@@ -31,7 +31,6 @@ test('Route / and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" lang="en">'))
 	t.true(html.includes('<meta data-n-head="ssr" language="English">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="name" key="name" property="name" name="name" content="App name">'))
-	t.true(html.includes('<meta data-n-head="ssr" data-hid="title" key="title" property="title" name="title" content="Home Page">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="description" key="description" property="description" name="description" content="Hello World Page">'))
 })
 
@@ -42,7 +41,6 @@ test('Route /post and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" lang="en">'))
 	t.true(html.includes('<meta data-n-head="ssr" language="English">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="name" key="name" property="name" name="name" content="App name">'))
-	t.true(html.includes('<meta data-n-head="ssr" data-hid="title" key="title" property="title" name="title" content="Hello">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="description" key="description" property="description" name="description" content="Hello World page in blog">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:site_name" key="og:site_name" property="og:site_name" name="og:site_name" content="App name">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:title" key="og:title" property="og:title" name="og:title" content="openGraph title">'))
