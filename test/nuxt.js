@@ -14,6 +14,7 @@ let nuxt = null
 test.before('Init Nuxt.js', async () => {
 	config.dev = false
 	config.mode = 'universal'
+	config.seo.baseUrl = 'http://localhost:4000'
 	nuxt = new Nuxt(config)
 	await new Builder(nuxt).build()
 	nuxt.listen(4000, 'localhost')
@@ -32,6 +33,7 @@ test('Route / and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" language="English">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="name" key="name" property="name" name="name" content="App name">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="description" key="description" property="description" name="description" content="Hello World Page">'))
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/">'))
 })
 
 test('Route /post and render HTML', async t => {
@@ -46,4 +48,10 @@ test('Route /post and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:title" key="og:title" property="og:title" name="og:title" content="openGraph title">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:description" key="og:description" property="og:description" name="og:description" content="Hello World page in blog">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:locale" key="og:locale" property="og:locale" name="og:locale" content="en">'))
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/post/">'))
+})
+
+test('Route /post?query=test and render HTML', async t => {
+	const html = await get('/post')
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/post/">'))
 })

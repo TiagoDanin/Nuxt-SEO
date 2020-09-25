@@ -22,7 +22,8 @@
 		"seo-plugin",
 		"social-media",
 		"vue",
-		"vuejs"
+		"vuejs",
+		"canonical"
 	],
 	"scripts": {
 		"start": "nuxt example",
@@ -83,5 +84,11 @@
 	"resolutions": {
 		"yargs-parser": "^20.2.0",
 		"kind-of": "^6.0.3"
-	}
+	},
+	"features": [
+		"Easy to use",
+		"Canonical tag automatically generated",
+		"Implementation of Open Graph Protocol (ogp)",
+		"Compatible with npm package: debug"
+	]
 }

@@ -11,6 +11,7 @@ module.exports = {
 		require('../lib/module')
 	],
 	seo: {
+		baseUrl: 'http://localhost:3000',
 		name: 'App name',
 		description: 'Example app with Nuxt Seo'
 	}
