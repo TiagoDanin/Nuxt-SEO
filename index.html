@@ -185,9 +185,35 @@ npm install nuxt-seo --save</code></pre>
 <h3 id="all"><a href="#all"><code>{...all}</code></a></h3>
 <p><code>charset</code>, <code>lang</code>, <code>language</code>, <code>copyright</code>, <code>name</code>, <code>subtitle</code>, <code>author</code>, <code>replyTo</code>, <code>description</code>, <code>keywords</code>, <code>url</code>, <code>noindex.ids.0</code>, <code>noindex.ids.1</code>, <code>noindex.ids</code>, <code>noindex.value.0</code>, <code>noindex.value.1</code>, <code>noindex.value</code>, <code>noindex</code>, <code>robots.ids.0</code>, <code>robots.ids.1</code>, <code>robots.ids</code>, <code>robots</code>, <code>openGraph.name</code>, <code>openGraph.title</code>, <code>openGraph.description</code>, <code>openGraph.locale</code>, <code>openGraph.url</code>, <code>openGraph.type</code>, <code>openGraph.profile.firstName</code>, <code>openGraph.profile.lastName</code>, <code>openGraph.profile.username</code>, <code>openGraph.profile.gender</code>, <code>openGraph.profile</code>, <code>openGraph.article.publishedTime</code>, <code>openGraph.article.modifiedTime</code>, <code>openGraph.article.expirationTime</code>, <code>openGraph.article.author.multi</code>, <code>openGraph.article.author</code>, <code>openGraph.article.section</code>, <code>openGraph.article.tag.multi</code>, <code>openGraph.article.tag</code>, <code>openGraph.article.authors.multi</code>, <code>openGraph.article.authors</code>, <code>openGraph.article.tags.multi</code>, <code>openGraph.article.tags</code>, <code>openGraph.article</code>, <code>openGraph.image.multi</code>, <code>openGraph.image.url</code>, <code>openGraph.image.width</code>, <code>openGraph.image.height</code>, <code>openGraph.image.alt</code>, <code>openGraph.image</code>, <code>openGraph.book.author.multi</code>, <code>openGraph.book.author</code>, <code>openGraph.book.isbn</code>, <code>openGraph.book.releaseDate</code>, <code>openGraph.book.tag.multi</code>, <code>openGraph.book.tag</code>, <code>openGraph.book.authors.multi</code>, <code>openGraph.book.authors</code>, <code>openGraph.book.tags.multi</code>, <code>openGraph.book.tags</code>, <code>openGraph.book</code>, <code>openGraph.price.currency</code>, <code>openGraph.price.amount</code>, <code>openGraph.price</code>, <code>openGraph.images.multi</code>, <code>openGraph.images.url</code>, <code>openGraph.images.width</code>, <code>openGraph.images.height</code>, <code>openGraph.images.alt</code>, <code>openGraph.images</code>, <code>openGraph</code>, <code>facebook.appId</code>, <code>facebook.pageId</code>, <code>facebook</code>, <code>twitter.title</code>, <code>twitter.description</code>, <code>twitter.card</code>, <code>twitter.type</code>, <code>twitter.site</code>, <code>twitter.creator</code>, <code>twitter</code>, <code>article.publishedTime</code>, <code>article.modifiedTime</code>, <code>article.expirationTime</code>, <code>article.author.multi</code>, <code>article.author</code>, <code>article.section</code>, <code>article.tag.multi</code>, <code>article.tag</code>, <code>article.authors.multi</code>, <code>article.authors</code>, <code>article.tags.multi</code>, <code>article.tags</code>, <code>article</code>, <code>book.author.multi</code>, <code>book.author</code>, <code>book.isbn</code>, <code>book.releaseDate</code>, <code>book.tag.multi</code>, <code>book.tag</code>, <code>book.authors.multi</code>, <code>book.authors</code>,
 <code>book.tags.multi</code>, <code>book.tags</code>, <code>book</code>, <code>image.multi</code>, <code>image.url</code>, <code>image.width</code>, <code>image.height</code>, <code>image.alt</code>, <code>image</code>, <code>images.multi</code>, <code>images.url</code>, <code>images.width</code>, <code>images.height</code>, <code>images.alt</code>, <code>images</code>, <code>og.name</code>, <code>og.title</code>, <code>og.description</code>, <code>og.locale</code>, <code>og.url</code>, <code>og.type</code>, <code>og.profile.firstName</code>, <code>og.profile.lastName</code>, <code>og.profile.username</code>, <code>og.profile.gender</code>, <code>og.profile</code>, <code>og.article.publishedTime</code>, <code>og.article.modifiedTime</code>, <code>og.article.expirationTime</code>, <code>og.article.author.multi</code>, <code>og.article.author</code>, <code>og.article.section</code>, <code>og.article.tag.multi</code>, <code>og.article.tag</code>, <code>og.article.authors.multi</code>, <code>og.article.authors</code>, <code>og.article.tags.multi</code>, <code>og.article.tags</code>, <code>og.article</code>, <code>og.image.multi</code>, <code>og.image.url</code>, <code>og.image.width</code>, <code>og.image.height</code>, <code>og.image.alt</code>, <code>og.image</code>, <code>og.book.author.multi</code>, <code>og.book.author</code>, <code>og.book.isbn</code>, <code>og.book.releaseDate</code>, <code>og.book.tag.multi</code>, <code>og.book.tag</code>, <code>og.book.authors.multi</code>, <code>og.book.authors</code>, <code>og.book.tags.multi</code>, <code>og.book.tags</code>, <code>og.book</code>, <code>og.price.currency</code>, <code>og.price.amount</code>, <code>og.price</code>, <code>og.images.multi</code>, <code>og.images.url</code>, <code>og.images.width</code>, <code>og.images.height</code>, <code>og.images.alt</code>, <code>og.images</code>, <code>og</code>, <code>fb.appId</code>, <code>fb.pageId</code>, <code>fb</code></p>
-<h3 id="vue-context"><a href="#vue-context">Vue Context</a></h3>
+<h3 id="nuxt-head-context"><a href="#nuxt-head-context">Nuxt Head Context</a></h3>
+<ul>
+<li><code>head: function({ $seo }) { $seo(options) }</code></li>
+<li><code>head: function() { this.$seo(options) }</code></li>
+</ul>
+<pre><code class="hljs language-vue"><span class="hljs-tag">&#x3C;<span class="hljs-name">template</span>></span>
+	<span class="hljs-tag">&#x3C;<span class="hljs-name">h1</span>></span>Hello World<span class="hljs-tag">&#x3C;/<span class="hljs-name">h1</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">template</span>></span>
+
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span>></span><span class="javascript">
+	<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+		<span class="hljs-attr">head</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$seo({
+				<span class="hljs-attr">name</span>: <span class="hljs-string">'Name app'</span>,
+				<span class="hljs-attr">title</span>: <span class="hljs-string">'Home Page'</span>,
+				<span class="hljs-attr">templateTitle</span>: <span class="hljs-string">'%name% - %title%'</span>,
+				<span class="hljs-attr">description</span>: <span class="hljs-string">'Hello World Page'</span>
+			})
+		}
+	}
+</span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span></code></pre>
+<h3 id="nuxt-asyncdata-context"><a href="#nuxt-asyncdata-context">Nuxt AsyncData Context</a></h3>
+<p><strong>NOTE:</strong> Do not use in Server-Side Rendering (SSR) mode.
+In SSR you should use the Nuxt Head Context.</p>
 <ul>
 <li><code>asyncData: function({ seo }) { seo(options) }</code></li>
+<li><code>asyncData: function({ $seo }) { $seo(options) }</code></li>
+<li><code>asyncData: function() { this.seo(options) }</code></li>
+<li><code>asyncData: function() { this.$seo(options) }</code></li>
 </ul>
 <pre><code class="hljs language-vue"><span class="hljs-tag">&#x3C;<span class="hljs-name">template</span>></span>
 	<span class="hljs-tag">&#x3C;<span class="hljs-name">h1</span>></span>Hello World<span class="hljs-tag">&#x3C;/<span class="hljs-name">h1</span>></span>
@@ -265,7 +291,7 @@ yarn <span class="hljs-built_in">test</span></code></pre>
 		<div>
 			<div class="uk-card uk-card-default uk-card-hover uk-card-body">
 				<h3 class="uk-card-title"><span uk-icon="star"></span></h3>
-				<p>37</p>
+				<p>38</p>
 			</div>
 		</div>
 	</div>
