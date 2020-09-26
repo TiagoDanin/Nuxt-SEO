@@ -62,3 +62,4 @@ typings/
 
 # Nuxt
 example/.nuxt
+dist/

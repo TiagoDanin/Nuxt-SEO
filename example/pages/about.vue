@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<h1>Hello World</h1>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dolorem impedit ducimus animi exercitationem voluptatibus modi sapiente nostrum culpa tempore, consectetur ipsam natus enim optio corrupti similique eos hic magni.</p>
+		<h1>About</h1>
+		<p>Duis exercitation id ullamco elit officia labore ex velit adipisicing cillum adipisicing.</p>
+		<a href="https://github.com/TiagoDanin/Nuxt-SEO/">GitHub project</a>
 		<br>
 		<p>Links:</p>
 		<ul>
@@ -17,7 +18,7 @@
 	export default {
 		head: function() {
 			return this.$seo({
-				title: 'Home Page'
+				title: 'About'
 			})
 		}
 	}
