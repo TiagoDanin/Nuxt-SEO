@@ -82,7 +82,7 @@
 		]
 	},
 	"resolutions": {
-		"yargs-parser": "^20.2.0",
+		"yargs-parser": "^20.2.1",
 		"kind-of": "^6.0.3"
 	},
 	"features": [
