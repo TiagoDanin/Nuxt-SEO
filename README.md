@@ -39,7 +39,9 @@ npm install nuxt-seo --save
 		name: '<name of site>',
 		title: '<title default>',
 		templateTitle: '%name% - %title%',
-		description: '<description default>'
+		description: '<description default>',
+		canonical: 'auto',
+		isForcedTrailingSlash: false
 		//...
 	}
 }
@@ -80,9 +82,14 @@ npm install nuxt-seo --save
 - Type: String
 
 #### `canonical`
-The `auto` this will automatically generate according to the route, or put the route manually.
+The `auto` this will automatically generate according to the route, or put the route manually
 - Default: `auto`
 - Type: String
+
+#### `isForcedTrailingSlash`
+Canonical force URL end with trailing slash
+- Default: `true`
+- Type: Boolean
 
 #### `image`
 - Default: `false`
@@ -176,21 +183,21 @@ yarn test
 
 <details>
 	<summary><a href="https://ghub.io/ava">ava</a>: Node.js test runner that lets you develop with confidence.</summary>
-	<b>Author</b>: novemberborn, sindresorhus, vdemedes</br>
+	<b>Author</b>: sindresorhus, novemberborn, vdemedes</br>
 	<b>License</b>: MIT</br>
-	<b>Version</b>: ^3.12.1
+	<b>Version</b>: ^3.13.0
 </details>
 <details>
 	<summary><a href="https://ghub.io/got">got</a>: Human-friendly and powerful HTTP request library for Node.js</summary>
 	<b>Author</b>: sindresorhus, szmarczak</br>
 	<b>License</b>: MIT</br>
-	<b>Version</b>: ^11.7.0
+	<b>Version</b>: ^11.8.0
 </details>
 <details>
 	<summary><a href="https://ghub.io/nuxt">nuxt</a>: A minimalistic framework for server-rendered Vue.js applications (inspired by Next.js)</summary>
 	<b>Author</b>: atinux, pi0, clarkdo</br>
 	<b>License</b>: MIT</br>
-	<b>Version</b>: ^2.14.6
+	<b>Version</b>: ^2.14.7
 </details>
 <details>
 	<summary><a href="https://ghub.io/vue">vue</a>: Reactive, component-oriented view layer for modern web interfaces.</summary>
@@ -202,7 +209,7 @@ yarn test
 	<summary><a href="https://ghub.io/xo">xo</a>: JavaScript/TypeScript linter with great defaults</summary>
 	<b>Author</b>: Sindre Sorhus</br>
 	<b>License</b>: MIT</br>
-	<b>Version</b>: ^0.33.1
+	<b>Version</b>: ^0.34.2
 </details>
 
 ## Contributors
