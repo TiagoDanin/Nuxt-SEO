@@ -13,7 +13,9 @@
 		name: '<name of site>',
 		title: '<title default>',
 		templateTitle: '%name% - %title%',
-		description: '<description default>'
+		description: '<description default>',
+		canonical: 'auto',
+		isForcedTrailingSlash: false
 		//...
 	}
 }
@@ -54,9 +56,14 @@
 - Type: String
 
 #### `canonical`
-The `auto` this will automatically generate according to the route, or put the route manually.
+The `auto` this will automatically generate according to the route, or put the route manually
 - Default: `auto`
 - Type: String
+
+### `isForcedTrailingSlash`
+Canonical force URL end with trailing slash
+- Default: `true`
+- Type: Boolean
 
 #### `image`
 - Default: `false`

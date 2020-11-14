@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<h1>About</h1>
-		<p>Duis exercitation id ullamco elit officia labore ex velit adipisicing cillum adipisicing.</p>
-		<a href="https://github.com/TiagoDanin/Nuxt-SEO/">GitHub project</a>
+		<h1>Your user!</h1>
+		<p>User: Tiago Danin.</p>
 		<br>
 		<p>Links:</p>
 		<ul>
@@ -19,7 +18,12 @@
 	export default {
 		head: function() {
 			return this.$seo({
-				title: 'About'
+				title: 'Nuxt is the best',
+				description: 'Tiago Danin User',
+				isForcedTrailingSlash: true,
+				openGraph: {
+					title: 'openGraph title'
+				}
 			})
 		}
 	}

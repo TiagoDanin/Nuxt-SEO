@@ -47,10 +47,15 @@ test('Route /news and render HTML', async t => {
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:title" key="og:title" property="og:title" name="og:title" content="openGraph title">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:description" key="og:description" property="og:description" name="og:description" content="Hello World page in blog">'))
 	t.true(html.includes('<meta data-n-head="ssr" data-hid="og:locale" key="og:locale" property="og:locale" name="og:locale" content="en">'))
-	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/news/">'))
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/news">'))
 })
 
-test('Route /news?query=test and render HTML', async t => {
+test('Route /news?query=test and render canonical', async t => {
 	const html = await get('/news?query=test')
-	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/news/">'))
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/news">'))
+})
+
+test('Route /news?query=test and render canonical with trailing slash', async t => {
+	const html = await get('/login?query=test')
+	t.true(html.includes('<link data-n-head="ssr" rel="canonical" href="http://localhost:4000/login/">'))
 })
