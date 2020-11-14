@@ -2,7 +2,7 @@
 	"name": "nuxt-seo",
 	"main": "lib/module.js",
 	"preferGlobal": false,
-	"version": "1.4.2",
+	"version": "1.5.0",
 	"description": "SEO / HTML Meta Tags Module for Nuxt.js",
 	"author": {
 		"email": "TiagoDanin@outlook.com",
