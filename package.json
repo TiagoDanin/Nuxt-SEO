@@ -52,7 +52,7 @@
 		"package.json"
 	],
 	"dependencies": {
-		"debug": "^4.2.0"
+		"debug": "^4.3.1"
 	},
 	"devDependencies": {
 		"ava": "^3.13.0",
