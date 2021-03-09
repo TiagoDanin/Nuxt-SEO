@@ -62,4 +62,5 @@ typings/
 
 # Nuxt
 example/.nuxt
+example/.nuxtStatic
 dist/
