@@ -1,8 +1,11 @@
 module.exports = [{
+	hid: 'charset',
 	charset: 'utf-8'
 }, {
+	hid: 'lang',
 	lang: 'en'
 }, {
+	hid: 'language',
 	language: 'English'
 }, {
 	hid: 'copyright',
