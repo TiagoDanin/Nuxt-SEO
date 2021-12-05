@@ -1,5 +1,11 @@
 # Nuxt SEO
 
+⚠️⚠️ Discontinued project ⚠️⚠️
+
+Use the https://github.com/nickfrosty/nuxt-seo
+
+------
+
 [![Travis](https://img.shields.io/travis/TiagoDanin/Nuxt-SEO.svg?branch=master&style=flat-square)](https://travis-ci.org/TiagoDanin/Nuxt-SEO) [![Downloads](https://img.shields.io/npm/dt/nuxt-seo.svg?style=flat-square)](https://npmjs.org/package/nuxt-seo) [![Node](https://img.shields.io/node/v/nuxt-seo.svg?style=flat-square)](https://npmjs.org/package/nuxt-seo) [![Version](https://img.shields.io/npm/v/nuxt-seo.svg?style=flat-square)](https://npmjs.org/package/nuxt-seo) [![XO code style](https://img.shields.io/badge/code%20style-XO-red.svg?style=flat-square)](https://github.com/xojs/xo) 
 
 SEO / HTML Meta Tags Module for Nuxt.js
